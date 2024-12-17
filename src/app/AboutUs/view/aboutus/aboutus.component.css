@@ -1,0 +1,16 @@
+.gly-title h2{
+    color: #184173;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 32px 0px;
+    text-align: center;
+}
+
+.pdt-img{
+    margin-bottom: 26px;
+}   
+
+.Gallery{
+    background-color: #ededed
+}

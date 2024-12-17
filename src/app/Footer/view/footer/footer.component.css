@@ -1,0 +1,56 @@
+.layout {
+    padding-top: 25px;
+    color: #184173;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.desc-title h2,
+.footer-link h2,
+.social h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.desc-cont p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+ul li a {
+    font-size: 20px;
+}
+
+i {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.subscribe h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+}
+
+.social-icon i {
+    color: #184173;
+}
+
+.sub-form input {
+    border-color: #184173;
+    border-radius: 10px;
+}
+.bottom-footer{
+    background-color: #2365b6;
+}
+.footer-text{
+
+padding: 2px 0 0 0;
+}
+
+.text-white {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}

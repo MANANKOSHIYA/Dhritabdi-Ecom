@@ -1,0 +1,136 @@
+<app-header></app-header>
+
+<!-- cart page start -->
+<div class="cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cart-title my-5 d-flex flex-wrap align-item-center justify-content-between">
+                    <h2>Your Cart</h2>
+                    <h5 style="cursor: pointer" routerLink="/product-list">
+                        Contiune Shopping
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <div class="product-deatils">
+                    <table class="cart-items">
+
+                        <thead>
+                            <tr class="border-bottom">
+                                <th class="caption-with-letter-spacing" scope="col">Product</th>
+                                <th class="cart-items__heading--wide small-hide caption-with-letter-spacing" colspan="1"
+                                    scope="col">
+                                    Quantity
+                                </th>
+                                <th class="small-hide right caption-with-letter-spacing" colspan="1" scope="col">
+                                    Total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="card-item"  *ngFor="let product of cartproductmaster">
+                                <td>
+                                    <div class="product mt-5">
+                                        <div
+                                            class="product-img cart-item__image-container gradient global-media-settings">
+                                            <img [src]="imgURL + product.productImage" alt="thumbnail pic"
+                                                class="cart-item__image" width="150" height="150" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-info">
+                                        <p>{{ product.productName }}</p>
+                                    </div>
+                                    <div class="product-des">
+                                        <p>Rs.{{ product.salePrice | currency : "INR" }}</p>
+                                    </div>
+                                    <div class="counter-delete">
+                                        <div class="quan-btn">
+                                            <button class="btn" (click)="decrement(product)">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            {{ product.productQuantity }}
+                                            <button class="btn" (click)="increment(product)">
+                                                <i class="bi bi-plus-lg"></i>
+                                            </button>
+                                        </div>
+                                        <div class="trash">
+                                            <button class="border-0" (click)="removeItem(product)">
+                                                <i class="bi bi-trash" style=" cursor: pointer; font-size: 1.5rem; line-height: 1; "></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    {{product.salePrice * product.productQuantity | currency : "INR"}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-12" *ngIf="!isCartEmpty">
+                <div class="sub-total mt-5">
+                    <div class="total d-flex flex-wrap align-item-center">
+                        <h5 class="me-4">Subtotal</h5>
+                        <h4>Rs.{{ cartmaster?.subTotalPrice | currency : "INR" }}</h4>
+                    </div>
+                    <div class="tac-cont">
+                        <p>Tax include Shipping calculated at checkout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="payment-button">
+                    <div class="pay-btn">
+                        <button type="button" class="btn py-4 text-white" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal50" style="padding-right: 83px">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                    <div class="method-logo" style="display: flex; align-items: center; margin-right: -13px; float: right;">
+                        <div class="method-icon" style="transform: translateX(220px); z-index: 4">
+                            <img src="../../../../assets/image/product-img/phonepe.svg" alt="" width="60%"
+                                height="60%" />
+                        </div>
+                        <div class="method-icon" style="transform: translateX(216px); z-index: 4">
+                            <img src="../../../../assets/image/product-img/googlepay.svg" alt="" width="60%"
+                                height="60%" />
+                        </div>
+                        <div class="method-icon" style="transform: translateX(212px); z-index: 4">
+                            <img src="../../../../assets/image/product-img/paytm.svg" alt="" width="60%" height="60%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal50" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

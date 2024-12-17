@@ -1,0 +1,67 @@
+.about {
+    margin-top: 20px;
+    background-color: #ededed;
+}
+
+.heading {
+    background-color: #184173;
+    color: #fff;
+    text-align: center;
+}
+
+.heading h5 {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 8px 0px;
+}
+
+.title {
+    font-size: 48px;
+    color: #184173;
+}
+
+.product-img {
+    position: sticky;
+}
+.proctuct-sale{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 106px;
+    height: 38px;
+    color: white;
+    left: 16px;
+    top: 16px;
+}
+
+
+.proctuct-sale h6{
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 3px;
+}
+
+.pdt-desc{
+    background-color: #ededed;
+}
+.title-name{
+    padding-left: 25px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    font-size: x-large;
+}
+
+.form input{
+    width: 50%;
+}

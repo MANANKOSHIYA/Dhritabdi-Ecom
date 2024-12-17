@@ -1,0 +1,114 @@
+.Product-list,
+.bnr-img {
+    background-color: #ededed;
+}
+
+.Product-list {
+    padding-bottom: 40px;
+}
+
+.pdt-title {
+    text-align: center;
+    color: #184173;
+    margin: 24px 0px 30px 0;
+}
+
+.pdt-title h2 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.module-slider .card img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.module-slider .card figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.product-sale {
+    background-color: red;
+    color: #fff;
+    position: relative;
+    width: 70px;
+    height: 28px;
+    border: 0px solid;
+    border-radius: 25px;
+    left: 10px;
+    top: -16.5rem;
+}
+
+.product-sale h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+    height: 272px;
+}
+
+.card-body {
+    background-color: #18417317;
+}
+
+.pdt-name {
+    text-align: center;
+}
+
+.pdt-name h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    font-size: 24px;
+}
+
+.pdt-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li {
+    list-style: none;
+    font-size: x-large;
+    text-align: center !important;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.pdt-sell-price {
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* .pdt-sell-price h4 s{
+
+} */
+.showmore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+
+.showmore button {
+    background-color: #184173;
+    color: aliceblue;
+    width: 49%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+}

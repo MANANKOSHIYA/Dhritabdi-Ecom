@@ -1,0 +1,338 @@
+/* <-- Products Start --> */
+
+.about {
+    padding: 20px 0;
+    background-color: #ededed;
+}
+
+.heading {
+    background-color: #184173;
+    color: #fff;
+    text-align: center;
+}
+
+.heading h5 {
+    font-size: 22px;
+    font-weight: 400;
+    padding: 4px 0px;
+}
+
+.titles h2 {
+    font-size: 40px;
+    color: #184173;
+    padding-left: 30px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-body {
+    background-color: #ededed;
+}
+
+.product-sale {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #c11e1e;
+    border: 0px solid;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    left: 16px;
+    top: 16px;
+}
+
+.product-sale h6 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 3px;
+}
+
+.product-title h5 {
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.product-title {
+    text-align: center;
+}
+
+.review ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    font-size: x-large;
+    text-align: center !important;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.buy {
+    text-align: center;
+    margin-top: 26px;
+}
+
+.buy button {
+    background-color: #184173;
+    color: aliceblue;
+    width: 94%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.view-btn {
+    text-align: center;
+    margin-top: 26px;
+}
+
+.view-btn button {
+    background-color: #184173;
+    color: aliceblue;
+    letter-spacing: 2px;
+    /* width: 15%; */
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.box:hover .default-image {
+    display: none;
+}
+
+.box:hover .hover-image {
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.hover-image {
+    height: 279px;
+}
+
+.box .hover-image {
+    display: none;
+}
+
+@media only screen and (max-width:426px) {
+    .titles h2 {
+        padding-left: 0px;
+        text-align: center;
+    }
+    .about .card{
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .about .card{
+        margin-bottom: 30px;
+    }
+}
+
+/* <-- Products End --> */
+
+/* <-- who we are Start --> */
+.who {
+    background-color: #dad0d0;
+    padding: 30px 0;
+}
+
+.who-title h2 {
+    color: #184173;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.who-cont p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media only screen and (max-width:321px) {
+    .who-title h2 {
+        font-size: 36px !important;
+    }
+}
+
+@media only screen and (max-width:376px) {
+    .who-title h2 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    .who-cont p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .who-cont p {
+        font-size: 18px;
+    }
+
+    .who-title h2 {
+        font-size: 38px;
+    }
+
+    .who .logo {
+        padding-top: 8rem;
+    }
+}
+
+/* <-- who we are End --> */
+
+
+/* <--  Organic Start --> */
+
+.organic {
+    background-color: #ededed;
+    padding-bottom: 30px;
+}
+
+.organic-title h2 {
+    font-size: 38px;
+    color: #184173;
+    padding: 60px 0;
+    font-weight: 700;
+}
+
+/* <--  Organic End --> */
+
+
+
+/* <--  Farming Start --> */
+
+.Farming {
+    background-color: #dad0d0;
+    padding: 30px 0;
+
+}
+
+.Farming-title h2 {
+    color: #184173;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.Farming-cont p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width:321px) {
+
+}
+
+@media only screen and (max-width:376px) {
+   
+}
+
+@media only screen and (max-width:426px) {
+    .Farming-title h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .Farming-cont p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width:769px) {
+  
+    .Farming-title h2 {
+        font-size: 48px;
+    }
+    .Farming-cont p {
+        font-size: 19px;
+    }
+    .Farming .logo{
+        padding-top: 8rem;
+    }
+}
+
+/* <--  Farming End --> */
+
+
+
+/* <--  Care Start --> */
+.care {
+    background-color: #ededed;
+    padding-bottom: 40px;
+}
+
+.care-title {
+    color: #184173;
+    padding: 28px 0;
+}
+
+/* <--  Care End --> */
+
+
+
+/* <--  Review Start --> */
+.review-title {
+    padding: 20px 0;
+}
+
+.review-testi {
+    background-color: #dad0d0;
+}
+
+.review-card {
+    margin-left: 20px;
+    border-radius: 30px;
+}
+
+.review-detail {
+    padding: 30px;
+}
+
+.testi-img {
+    /* padding: 10px; */
+    width: 142px !important;
+    height: 140px !important;
+    border-radius: 50%;
+}
+
+.testi-detl {
+    padding-left: 16px;
+}
+
+.testi-detl h2 {
+    text-align: center;
+}
+
+.testi-cont {
+    text-align: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+/* <--  Review End --> */

@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<!-- <-----------Banner img---------->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="bnr-img">
+            <img class="img-fluid" src="../../../../assets/image/product-img/001.png" alt="Banner img">
+        </div>
+    </div>
+</div>
+
+
+<!-- <-----------Product List---------->
+
+<section class="Product-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pdt-title">
+                    <h2>Product List</h2>
+                </div>
+            </div>
+            <ng-container *ngFor="let a of displayProduct; let i= index">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a routerLink="/product/{{a.productID}}" style="text-decoration: none;" (click)="scrollToTop">
+                    <div class="module-slider">
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <figure><img src="{{imgURL+a.productImage}}" alt="" class="w-100"></figure>
+                                <div class="product-sale">
+                                    <h6>{{a.salePercentage | number : '1.2-2' }}%</h6>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="pdt-name">
+                                    <h5>{{a.productName}}</h5>
+                                </div>
+    
+                                <div class="pdt-review">
+                                    <ul class="d-flex flex-wrap align-item-center">
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                    </ul>
+                                </div>
+    
+                                <div class="pdt-price">
+                                    <div class="pdt-sell-price">
+                                        <h4>Rs.{{a.salePrice}} </h4>
+                                        <h5><s>Rs.{{a.mainPrice}} </s></h5>
+                                    </div>
+                                </div>
+    
+                                <div class="showmore">
+                                    <button class="seeproduct btn" routerLink="/cart{{a.productID}}">Add To Cart</button>
+                                    <button routerLink="/product/{{a.productID}}" class="btn buy">Buy Now</button>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </ng-container>
+            
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

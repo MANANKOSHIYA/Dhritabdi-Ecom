@@ -1,0 +1,78 @@
+<!-- <div class="about">
+    <div class="heading">
+        <h5>100% Organic Farm Fresh</h5>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title my-3">
+                    <h2>product</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="product-img ">
+                        <img src="../../../assets/image/product-img/01.png" class="card-img-top" alt="product img">
+                    </div>
+                    <div class="proctuct-sale">
+                        <h6>33.33%</h6>
+                    </div>
+                    <div class="pdt-desc">
+                        <div class="title-name">
+                            <h2>Ghee</h2>
+                        </div>
+                        <div class="review">
+                            <ul>
+                                <li><i class="bi bi-star"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <div class="high-price">
+                                <s>1500/-</s>
+                            </div>
+                            <div class="low-price">
+                                999/-
+                            </div>
+                        </div>
+                        <div class="buy-btn">
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+            <form class="form">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="text" class="form-control w-50 text-center" [(ngModel)]="submitArray.email" name="email" 
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter text">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control w-50 text-center" [(ngModel)]="submitArray.password" name="password"
+                    id="exampleInputPassword1" placeholder="enter password">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+                <button type="submit" class="btn btn-primary" (click)="Remove()">Remove</button>
+            </form>
+        </div>
+        <div class="col-4">
+            
+        </div>
+    </div>
+</div>
+

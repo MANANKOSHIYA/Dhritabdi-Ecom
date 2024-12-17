@@ -1,0 +1,102 @@
+.product-detail,
+.additional,
+.feature,
+.pdt-shot-desc {
+    background-color: #ededed;
+}
+
+.product-detail {
+    padding-top: 40px;
+}
+
+.sub-img img {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-price h6 s {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.mainprice {
+    padding-top: 3px;
+}
+
+.product-price p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 145px;
+    height: 32px;
+    color: white;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0 0 7px 16px;
+    letter-spacing: 2px;
+}
+
+.product-price p span {
+    padding-left: 14px;
+
+}
+
+.product-tax h5 {
+    font-weight: 400;
+}
+
+.product-quantity {
+    display: flex;
+
+}
+
+.product-quantity .qua-btn {
+    width: 20%;
+}
+
+.product-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 34px;
+}
+
+.product-btn button {
+    border: 0px solid;
+    background-color: #184173;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}

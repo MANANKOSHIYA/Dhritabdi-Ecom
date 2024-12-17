@@ -1,0 +1,93 @@
+.con-us,
+.ConUs-detail {
+    background-color: #ededed;
+}
+
+.contact-title,
+.form-title {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-title h2,
+.form-title h2 {
+    font-size: 35px;
+}
+
+.con-num,
+.con-eml,
+.con-loc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.con-num i,
+.con-eml i,
+.con-loc i {
+    font-size: 32px;
+    background-color: #184173;
+    border-radius: 50%;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.con-num,
+.con-eml,
+.con-loc {
+    margin-bottom: 12px;
+}
+
+.loc,
+.eml,
+.nmb {
+    padding-left: 15px;
+}
+
+.form-size {
+    height: 55px;
+    background-color: #e4e4e4;
+}
+
+.desc-icon,
+.nmb-icon,
+.eml-icon,
+.prn-icon {
+    position: relative;
+    font-size: 27px;
+    color: #184173;
+    width: 6%;
+    top: -48px;
+}
+
+.prn-icon,
+.eml-icon {
+    left: 220px;
+}
+
+.nmb-icon,
+.desc-icon {
+    left: 502px;
+}
+
+.name,
+.email,
+.descrition,
+.number {
+    margin-bottom: -25px;
+}
+
+.sub-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub-btn button {
+    background-color: #184173;
+    color: #fff;
+    width: 24%;
+}

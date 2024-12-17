@@ -1,0 +1,579 @@
+<app-header></app-header>
+
+<!-- <----------------------------Slider Start-------------------------->
+
+<div class="module-slider">
+    <owl-carousel-o [options]="customOptions3">
+        <ng-template carouselSlide *ngFor="let mQ of displaysliders">
+            <div class="col-md-12">
+                <div class="slider-img text-center">
+                    <ng-container *ngIf="mQ.isActive == true">
+                        <img src="{{imgURL+mQ.sliderImage}}" class="w-100" alt="Carousel Image">
+                    </ng-container>
+                </div>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+
+<!-- <----------------------------Slider End---------------------------->
+
+    
+<!------------------------------ Products Start ------------------------>
+
+<div class="about">
+    <div class="heading">
+        <h5>100% Organic Farm Fresh</h5>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titles my-3">
+                    <h2>Products</h2>
+                </div>
+            </div>
+            <ng-container *ngFor="let a of displayProducts ;let i = index">
+                <ng-container *ngIf="i==1">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt=""
+                                            class=" default-image img-fluid">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image  img-fluid"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==2">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==5">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==6">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==7">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="i==8">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a routerLink="/product/{{a.productID}}" (click)="scrollToTop">
+                            <div class="card mx-2 box-wrap">
+                                <div class="card-img text-center box">
+                                    <figure> <img src="{{imgURL+a.productImage}}" alt="" class="w-100 default-image">
+                                    </figure>
+                                    <figure><img src="../../../../assets/image/product-img/01.png" alt=""
+                                            class="hover-image w-100"></figure>
+                                    <div class="product-sale">
+                                        <h6>{{a.salePercentage | number: '1.2-2' }}%</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body featurd-products">
+                                    <div class="product-title mb-2">
+                                        <h5 style="letter-spacing: 2px;">{{a.productName}}</h5>
+                                    </div>
+                                    <div class="review mb-4">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-price1 my-2">
+                                        <div class="sell-price text-center">
+                                            <h5 style="letter-spacing: 2px;">Rs.{{a.salePrice}}</h5>
+                                            <h6><s class="" style="letter-spacing: 2px;">Rs.{{a.mainPrice}}</s></h6>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <button class="btn py-2" routerLink="/product/{{a.productID}}"
+                                            (click)="scrollToTop" style="letter-spacing: 2px;">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+
+        <div class="col-md-12">
+            <div class="view-btn">
+                <button class="btn" routerLink="/product-list" (click)="scrollToTop()">View All</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------------ Products End ------------------------>
+
+
+
+
+
+<!------------------------------- who we are start ------------------------------->
+
+<div class="who">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="logo text-center ">
+                    <img src="{{imgURL+displayAboutUs.aboutUs1Image}}" alt="about" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="who-title">
+                    <h2 class="text-center mb-4"> {{displayAboutUs.aboutUs1Heading}}</h2>
+                </div>
+                <div class="who-cont">
+                    <p style="text-align: justify;"> {{displayAboutUs.aboutUs1Text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!------------------------------- who we are End ------------------------------->
+
+
+
+
+
+<!------------------------------- Organic start ------------------------------->
+
+<div class="organic">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="organic-title mb-5 text-center">
+                    <h2>Why Dritabdi?</h2>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon text-center">
+                    <img src="../../../../assets/image/organic/Group 18.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5 class="mb-3">500+Acres Of Certified Organic Farm</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon text-center">
+                    <img src="../../../../assets/image/organic/Group 20.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5 class="mb-3">Pure and Wholesome</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon text-center">
+                    <img src="../../../../assets/image/organic/Group 21.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5 class="mb-3">Traditional Craftsmanship</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon text-center">
+                    <img src="../../../../assets/image/organic/icon.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5 class="mb-3">Health Benefits</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon text-center">
+                    <img src="../../../../assets/image/organic/Group 23.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5 class="mb-3">Nutrient-Rich</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2">
+                <div class="organic-icon1 text-center">
+                    <img src="../../../../assets/image/organic/Group 24.png" alt="">
+                </div>
+                <div class="organic-cont text-center">
+                    <h5>No Use Of Chemicals & Preservatives</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Organic End ------------------------------->
+
+
+
+
+
+<!------------------------------- Farming start ------------------------------->
+
+<div class="Farming">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="Farming-title  mb-4">
+                    <h2> {{displayAboutUs.aboutUs2Heading}}</h2>
+                </div>
+                <div class="Farming-cont">
+                    <p style="text-align: justify"> {{displayAboutUs.aboutUs2Text}}</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="logo text-center ">
+                    <img src="{{imgURL+displayAboutUs.aboutUs2Image}}" alt="about" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!------------------------------- Farming End ------------------------------->
+
+
+
+<!------------------------------- Care start ------------------------------->
+
+ <div class="care">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <div class="care-title text-center">
+                    <h2>Love Care & Affection</h2>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-6">
+                <div class="care-video text-center">
+                    <video autoplay [muted]=" 'muted'" loop id="fullscreen-video" style="width: 95%">
+                        <source src="../../../../assets/image/Aboutus/Dhritabdhi.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!------------------------------- Care End ------------------------------->
+
+
+
+
+
+<!------------------------------- Reviews start ------------------------------->
+
+<div class="review-testi">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="review-title text-center">
+                    <h2>Customer Reviews</h2>
+                </div>
+            </div>
+
+            <div class="review-slider">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let t of displaytesti">
+                        <div class="card review-card" style="height: 300px;">
+                            <div class="review-detail d-flex flex-wrap align-items-center">
+                                <img src="{{imgURL+t.testimonialImage}}" class="testi-img img-fluid" alt="testi image">
+                                <div class="testi-detl">
+                                    <h2>{{t.testimonialName}}</h2>
+
+                                    <div class="testi-star">
+                                        <ul class="d-flex">
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-cont">
+                                <h5>{{t.testimonialReview}}</h5>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------------- Reviews End ------------------------------->
+
+<app-footer></app-footer>

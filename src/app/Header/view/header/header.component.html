@@ -1,0 +1,40 @@
+    <div class="heading text-center">
+        <h6>Free Shipping From 899/-</h6>
+    </div>
+    <div class="header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a routerLink="/home" class="logo" style="width:40%">
+                    <img src="../../../../assets/image/logo/Name-02.png" alt="" width="50%">
+                </a>
+                <div class="collapse navbar-collapse" [ngClass]="{'show': isNavbarOpen}" id="navbarSupportedContent"
+                    (click)="closeNavbar()">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#" routerLink="/product-list">Product</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#" routerLink="/Aboutus">Gallery</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#" routerLink="/contactus">Contact Us</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#" routerLink="/TrackOrder">Track Order</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="login sticky-top">
+            <button  class="btn " routerLink="/cart"> <i class="bi bi-cart3"></i> </button>
+        </div>
+    </div>

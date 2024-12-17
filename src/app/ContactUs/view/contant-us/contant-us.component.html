@@ -1,0 +1,111 @@
+<app-header></app-header>
+
+<div class="con-us">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="con-us-img">
+                    <img src="../../../../assets/image/contact/02.png" alt="contactUs-img" class="text-center"
+                        style="width: 100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ConUs-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="contact-item">
+                    <div class="contact-title">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="con-item-detail">
+                        <div class="con-loc">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="loc">
+                                <h5>Location</h5>
+                                <p>213,Bhagunagar,Surat, <br> gujarat,India-395006</p>
+                            </div>
+                        </div>
+                        <div class="con-eml">
+                            <i class="bi bi-envelope-at"></i>
+                            <div class="eml">
+                                <h5>Email</h5>
+                                <p>help@dhritabdhi.com</p>
+                            </div>
+                        </div>
+                        <div class="con-num">
+                            <i class="bi bi-phone"></i>
+                            <div class="nmb">
+                                <h5>Number</h5>
+                                <p>82388 23868</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-detail">
+                    <div class="form-title">
+                        <h2>Inquriy Now</h2>
+                    </div>
+                    <form class="row" [formGroup]="AddData">
+                        <div class=" col-6 ">
+                            <div class="name ">
+                                <input type="text" formControlName="contactUsName" class="form-control form-size"
+                                    id="exampleFormControlInput1" placeholder="Name">
+                                <div class="prn-icon">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-6 ">
+                            <div class="email">
+                                <input type="email" formControlName="contactUsEmailID" class="form-control form-size"
+                                    id="exampleFormControlInput1" placeholder="Your Email">
+                                <div class="eml-icon">
+                                    <i class="bi bi-envelope-at-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class=" col-12 ">
+                            <div class="number">
+                                <input type="text" formControlName="contactUsPhoneNo" class="form-control form-size"
+                                    id="exampleFormControlInput1" placeholder="Your Number">
+                                <div class="nmb-icon">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 ">
+                            <div class="descrition">
+                                <textarea formControlName="contactUsMessage" class="form-control form-size"
+                                    id="exampleFormControlTextarea1" placeholder="Description" rows="3"></textarea>
+                                <div class="desc-icon">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 ">
+                            <div class="sub-btn">
+                                <button type="submit" class="btn mb-3" (click)="PostData()">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<app-footer></app-footer>

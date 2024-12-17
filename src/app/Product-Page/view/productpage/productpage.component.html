@@ -1,0 +1,190 @@
+<app-header></app-header>
+<!-- <-----------Product Page---------->
+
+<!-- <section id="carousel1">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{imgURL+productImage}}" class="img-fluid" alt="...">
+                </div>
+                <div class="carousel-item" *ngFor="let mQ of productImages">
+                    <img src="{{imgURL+mQ}}" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section> -->
+
+<section class="product-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12" id="carousel2">
+                <div class="main-img">
+                    <img src="{{imgURL+productImage}}" alt="product image" width="90%">
+                </div>
+                <div class="sub-img">
+                    <div class="thumbnail ">
+                        <div *ngFor="let image of productImages" (click)="changeproductImage(image)" class="img-fluid">
+                            <img [src]="imgURL+image" alt="Sub image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="content">
+                    <div class="col-lg-12 col-md-12 col-sm-6">
+                        <div class="title">
+                            <h2>{{currentdata.productName}}</h2>
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <h6 class="mainprice"><s>Rs.{{currentdata.mainPrice}}</s></h6>
+                        <h4>Rs.{{currentdata.salePrice}}</h4>
+                        <p>{{currentdata.salePercentage | number : '1.2-2' }}% <span>off</span></p>
+                    </div>
+                    <div class="product-tax">
+                        <h5 class="mb-4" style="line-height: 40px;letter-spacing: 2px;">Inclusive Of All taxes</h5>
+                        <h5 class="mb-4" style="letter-spacing: 2px;">Unit Sale Price - {{ currentdata.salePrice }}/ml
+                        </h5>
+                    </div>
+                    <div class="product-quantity">
+                        <div class="qut-text">
+                            <h3>Quantity</h3>
+                        </div>
+                        <div class="qua-btn border ms-5">
+                            <button (click)="decrement()" class="btn"><i class="bi bi-dash"></i></button>
+                            {{ counter }}
+                            <button (click)="increment()" class="btn"><i class="bi bi-plus-lg"></i></button>
+                        </div>
+
+                    </div>
+                    <div class="mbicon">
+                        <div class="organic-add mt-5">
+
+
+                            <div style="width: 23%;display: inline-block;">
+                                <div style="text-align: center;">
+                                    <img src="../../../../assets/image/product-img/Wooden-Bilona-Method.png" alt="">
+                                </div>
+                                <div style="text-align: center; font-size: 14px;font-family: 'Montserrat', sans-serif;">
+                                    Wooden-Bilona Method
+                                </div>
+                            </div>
+
+                            <div style="width: 24%;display: inline-block;">
+                                <div style="text-align: center;">
+                                    <img src="../../../../assets/image/product-img/Organic-Fodder-For-Cows.png" alt="">
+                                </div>
+                                <div style="text-align: center; font-size: 14px;font-family: 'Montserrat', sans-serif;">
+                                    Organic Fodder For Cows
+                                </div>
+                            </div>
+
+                            <div style="width: 23%;display: inline-block;">
+                                <div style="text-align: center;">
+                                    <img src="../../../../assets/image/product-img/No-Added-Preservatives.png" alt="">
+                                </div>
+                                <div style="text-align: center; font-size: 14px;font-family: 'Montserrat', sans-serif;">
+                                    No Added Preservatives
+                                </div>
+                            </div>
+
+                            <div style="width: 24%;display: inline-block;">
+                                <div style="text-align: center;">
+                                    <img src="../../../../assets/image/product-img/Made-In-Brahma-Muhrat.png" alt="">
+                                </div>
+                                <div style="text-align: center; font-size: 14px;font-family: 'Montserrat', sans-serif;">
+                                    Made In Brahma Muhrat
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-btn">
+                        <div class="adds-btn" >
+                            <button  (click)="AddtocartClick(product)" [disabled]="counter === 0">Add To Cart</button>
+                        </div>
+                        <div class="buy-btn">
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- product details End -->
+
+<!-- product short desc start -->
+<div class="pdt-shot-desc">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-6">
+            <div class="product-title mt-4">
+              <h2>Product-Short Description:</h2>
+            </div>
+            <div class="long-desc mt-4">
+              <p>{{ currentdata.productLongDescription}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+  <!-- product short desc End -->
+  <!-- special feature start -->
+  <section class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="feature-title">
+            <h2>Special Feature:</h2>
+          </div>
+          <div class="feature-cont">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit fuga ea accusantium blanditiis ex
+              cum ut autem, adipisci corporis amet deleniti laudantium perferendis fugit labore harum soluta
+              unde. Explicabo laboriosam eos quia porro asperiores recusandae ullam sint eum sequi ipsam, quam
+              assumenda quidem. Velit dolorem deserunt placeat nam, reprehenderit esse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- special feature End -->
+  
+  <!-- Additonal Information start -->
+  <section class="additional mb-4 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="additonal-title">
+            <h2>Additional Information</h2>
+          </div>
+          <div class="additioan-cont">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos iste distinctio sequi omnis. Quasi
+              doloribus dolor cum illo minima! Reprehenderit placeat, odio iure, provident explicabo
+              reiciendis rem molestias numquam alias suscipit recusandae, saepe aut accusamus nemo
+              voluptatibus deleniti facilis delectus quos labore! Beatae impedit voluptas doloribus maxime
+              esse officia incidunt accusamus odit quos, quaerat ab corrupti vero, similique optio pariatur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Additonal Information End -->
+<app-footer></app-footer>
